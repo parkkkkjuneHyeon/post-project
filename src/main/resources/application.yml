@@ -1,0 +1,14 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    hikari:
+      username: ${ROOT:root}
+      password: ${PW:1234}
+      jdbc-url: jdbc:mysql://${DB_HOST:localhost}:${DB_PORT:13306}/${DB_NAME:board}?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Seoul
+  jpa:
+    generate-ddl: false
+    hibernate:
+      ddl-auto: create-drop
+    database-platform: org.hibernate.dialect.MySQL8Dialect
+    show-sql: true
+
